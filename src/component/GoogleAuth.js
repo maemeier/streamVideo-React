@@ -22,7 +22,7 @@ class GoogleAuth extends React.Component {
   renderAuthButton() {
     if (this.state.isSignedIn === null) {
       return <div>not sure if I'm signed in</div>;
-    } else if (this.state.isSignedIn) {
+    } else if (this.state.isSignedIn === true) {
       return <div> You are signed in </div>;
     } else {
       return <div>You are not signed in</div>;
@@ -30,7 +30,7 @@ class GoogleAuth extends React.Component {
   }
 
   render() {
-    return <div>{this.renderAuthButton}</div>;
+    return <div>{this.renderAuthButton()}</div>;
   }
 }
 export default GoogleAuth;
